@@ -12,6 +12,32 @@ export default function Home() {
     fetchIngredients();
   }, []);
 
+  const handleStockChange = async (id, quantity) => {
+    try {
+      const numQuantity = Number(quantity);
+
+      if (isNaN(numQuantity)) {
+        alert("Please enter a valid number");
+        return;
+      }
+
+      const updateResponse = await axios.post(
+        "/api/updateQuantityOfIngredients",
+        {
+          ingredient_id: id,
+          quantity: quantity,
+        }
+      );
+
+      // if i had more time i would like to add a message or prompt to the ui just to show that things are working
+      const response = await axios.get("/api/ingredients");
+      setIngredients(response.data);
+      alert(updateResponse?.data?.message || "stock updated");
+    } catch (error) {
+      alert("Error adjusting stock");
+    }
+  };
+
   return (
     <>
       <h2 className="mb-4 text-xl font-semibold">Current Stock</h2>
@@ -39,7 +65,16 @@ export default function Home() {
               <td className="px-6 text-left"> {ingredient.name}</td>
               <td className="px-6 text-left">{ingredient.unit}</td>
               <td className="px-6 text-left">{ingredient.cost}</td>
-              <td className="px-6 text-left">{ingredient.current_quantity}</td>
+              <td className="px-6 text-left">
+                <input
+                  type="number"
+                  className="border"
+                  defaultValue={ingredient.current_quantity}
+                  onChange={(e) =>
+                    handleStockChange(ingredient.ingredient_id, e.target.value)
+                  }
+                />
+              </td>
             </tr>
           ))}
         </tbody>

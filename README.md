@@ -1,40 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nory Inventory Management App
+
+## Overview
+
+This is an inventory management application designed for the fictional restaurant chain "Weird Salads". The application helps manage inventory more efficiently across multiple locations.
+
+### Technology Choices
+
+- **Next.js**: Chosen because it allows both API and UI to be developed in the same place, which is efficient when timelines are tight.
+- **JavaScript**: Used for both front-end and back-end due to its versatility and my familiarity with it.
+- **SQLite**: A relational database was chosen because the data was relational in nature.
+- **Tailwind CSS**: Installed because I can work more quickly with it for styling.
+- **Excalidraw**: Used for quick and rough designs due to its ease of use.
+
+## Designs
+
+### Initial Drawing
+
+![Initial Drawing](designs/Landing-Page-Design.png)
+
+### Redesigned Home Page
+
+![Redesigned Home Page](designs/Redesign_of_landing_page_stock_and_deliveries.png)
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up and run the application:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have the following software installed on your machine:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Node.js**
+- **Git**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Clone the repo**:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/yourusername/nory_inventory_app.git
+   cd nory_inventory_app
 
-## Learn More
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependancies with npm**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
 
-## Deploy on Vercel
+3. **might need to update permissions for db for initial seed**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   chmod +x seed_database.sh
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```
+
+4. **run the app**:
+   ```bash
+   npm run dev
+   ```

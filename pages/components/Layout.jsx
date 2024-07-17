@@ -8,13 +8,10 @@ export default function Layout({ children }) {
           <h1 className="text-2xl font-bold">Weird Salads</h1>
           <nav className="space-x-4">
             <Link href="/" className="text-blue-500 hover:text-blue-700">
-              Deliveries
+              Stock
             </Link>
             <Link href="/sales" className="text-blue-500 hover:text-blue-700">
               Sales
-            </Link>
-            <Link href="/stock" className="text-blue-500 hover:text-blue-700">
-              Stock
             </Link>
             <Link href="/reports" className="text-blue-500 hover:text-blue-700">
               Reports

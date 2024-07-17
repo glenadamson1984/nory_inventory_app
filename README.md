@@ -22,11 +22,24 @@ This is an inventory management application designed for the fictional restauran
 
 ![Redesigned Home Page](designs/Redesign_of_landing_page_stock_and_deliveries.png)
 
+## Database changes
+
+Had to run the following command to add quantity to ingredients table
+ALTER TABLE ingredients ADD COLUMN current_quantity INTEGER DEFAULT 0;
+
 ## Time constraints
 
 Due to tight timeline I haven't added a separate control for accepting deliveries - thought process was that
 staff could simply do this via the main stock screen and simply add the number of each item to current quantity,
 takes a little math for now but longer term I would build out an additional area for this as highlighted in redesign above.
+
+Ok ran out of time - pretty much at 4.5 hour mark - trying to wrap head around the relationship of menus/recipes and ingredients
+slowed me down on sales page - intention was to make user select their location which would then populate the menu items (really recipe names based on location), then on button click of Record Sale I was planning to do the logic for checking ingredient levels and
+making the sale or returning an error to say we didn't have enough ingredients to fulfill order.
+
+Never got near the reports.
+
+No testing for now either.
 
 ## Getting Started
 

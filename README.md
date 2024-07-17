@@ -22,6 +22,12 @@ This is an inventory management application designed for the fictional restauran
 
 ![Redesigned Home Page](designs/Redesign_of_landing_page_stock_and_deliveries.png)
 
+## Time constraints
+
+Due to tight timeline I haven't added a separate control for accepting deliveries - thought process was that
+staff could simply do this via the main stock screen and simply add the number of each item to current quantity,
+takes a little math for now but longer term I would build out an additional area for this as highlighted in redesign above.
+
 ## Getting Started
 
 Follow these steps to set up and run the application:
